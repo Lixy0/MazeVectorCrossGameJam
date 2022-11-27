@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class interactionScript : MonoBehaviour
 {
-    // Interaction WIN/PLAYER
-    public bool isInRange;
-    public UnityEvent interactAction;
+    //// Interaction WIN/PLAYER
+    //public bool isInRange;
+    //public UnityEvent interactAction;
 
     // New Scene/Next Level
-    public bool interactLoadLevel =false;
-    public int iLevelToLoad;
-    public string sLevelToLoad;
+    //public bool interactLoadLevel =false;
+    //public int iLevelToLoad;
+    //public string sLevelToLoad;
 
 
 
@@ -26,11 +26,11 @@ public class interactionScript : MonoBehaviour
     void Update()
     {
 
-        // If in range
-        if (isInRange)
-        {
-            interactAction.Invoke(); // Event
-        }
+        //// If in range
+        //if (isInRange)
+        //{
+        //    interactAction.Invoke(); // Event
+        //}
 
     }
 
@@ -40,7 +40,7 @@ public class interactionScript : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            isInRange = true;
+            //isInRange = true;
             Debug.Log("range player OK");
             LoadScene();
         }
@@ -49,15 +49,9 @@ public class interactionScript : MonoBehaviour
 
     void LoadScene()
     {
-        if (interactLoadLevel)
-        {
-            SceneManager.LoadScene(iLevelToLoad);
-        }
-        else
-        {
-            SceneManager.LoadScene(sLevelToLoad);
 
-        }
+            //SceneManager.LoadScene(iLevelToLoad);
+            SceneManager.LoadScene("Level1");
 
     }
 
